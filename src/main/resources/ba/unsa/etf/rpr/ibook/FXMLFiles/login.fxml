@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.ibook.Controllers.LoginController">
    <children>
       <HBox prefHeight="121.0" prefWidth="600.0" style="-fx-background-color: #A52A2A; -fx-alignment: center;">
          <children>
@@ -36,7 +36,7 @@
                      </font>
                   </Label>
                   <PasswordField fx:id="password" style="-fx-max-width: 200;" />
-                  <Button fx:id="loginbtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Login">
+                  <Button fx:id="loginbtn" mnemonicParsing="false" onAction="#loginBtnClicked" prefHeight="30.0" prefWidth="100.0" text="Login">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -44,7 +44,7 @@
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
                         <Label style="-fx-text-fill: #A52A2A;" text="Don't have an account?" />
-                        <Button fx:id="registerbtn" mnemonicParsing="false" prefWidth="80.0" text="Register" />
+                        <Button fx:id="registerbtn" mnemonicParsing="false" onAction="#registerBtnClicked" prefWidth="80.0" text="Register" />
                      </children>
                      <VBox.margin>
                         <Insets top="15.0" />
