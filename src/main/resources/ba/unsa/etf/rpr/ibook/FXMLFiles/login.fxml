@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="121.0" prefWidth="600.0" style="-fx-background-color: #A52A2A; -fx-alignment: center;">
+         <children>
+            <Label style="-fx-text-fill: white; -fx-font-size: 20;" text="Welcome to iBook" />
+         </children>
+      </HBox>
+      <VBox prefHeight="237.0" prefWidth="600.0" style="-fx-alignment: center;">
+         <children>
+            <VBox prefHeight="50.0" spacing="4.0" style="-fx-alignment: center;">
+               <children>
+                  <Label style="-fx-text-fill: #A52A2A;" text="Username:">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField style="-fx-max-width: 200;" />
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+                  <Label style="-fx-text-fill: #A52A2A;" text="Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <PasswordField style="-fx-max-width: 200;" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
