@@ -54,7 +54,7 @@ public class RegisterController {
         u.setPassword(password.getText());
         try{
             DaoFactory.userDao().add(u);
-            Alert a= new Alert(Alert.AlertType.CONFIRMATION);
+            Alert a= new Alert(Alert.AlertType.INFORMATION);
             a.setHeaderText("Account made succesfully");
             a.setContentText("Account made succesfully. Please log in now.");
             a.showAndWait();
