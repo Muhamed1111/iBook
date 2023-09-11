@@ -1,5 +1,8 @@
 package ba.unsa.etf.rpr.ibook.Controllers;
 
+import ba.unsa.etf.rpr.ibook.Dao.DaoFactory;
+import ba.unsa.etf.rpr.ibook.Domain.Author;
+import ba.unsa.etf.rpr.ibook.Exceptions.BookException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class LoginController {
 
@@ -35,7 +39,19 @@ public class LoginController {
 
     }
 
-    public void registerBtnClicked(ActionEvent actionEvent){
+    public void registerBtnClicked(ActionEvent actionEvent) throws IOException {
+        Parent root = null;
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/register.fxml"));
+        root = loader.load();
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.close();
+
+        Stage newStage = new Stage();
+        Scene scene = new Scene(root);
+        newStage.setScene(scene);
+        newStage.setResizable(false);
+        newStage.show();
 
     }
 }
