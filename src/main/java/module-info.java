@@ -1,6 +1,7 @@
 module ba.unsa.etf.rpr.ibook {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens ba.unsa.etf.rpr.ibook to javafx.fxml;
