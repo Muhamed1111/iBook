@@ -9,7 +9,6 @@ public class UserManager {
         if (username.isEmpty())return false;
         try{
             List<User> users = DaoFactory.userDao().getAll();
-            System.out.println(users);
             for(User u : users){
                 if (u.getUsername().equals(username)){
                     return false;
@@ -51,6 +50,4 @@ public class UserManager {
     public Boolean passwordsMatch(String pass, String repeat){
         return pass.equals(repeat);
     }
-
-
 }

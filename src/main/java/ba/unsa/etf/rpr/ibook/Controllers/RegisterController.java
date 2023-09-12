@@ -33,6 +33,14 @@ public class RegisterController {
     }
 
     public void register(ActionEvent actionEvent){
+        if (userManager.fieldsEmpty(password.getText(), repeatpassword.getText(), username.getText())){
+            Alert a= new Alert(Alert.AlertType.WARNING);
+            a.setHeaderText("Fields cannot be empty");
+            a.setContentText("Fields cannot be empty");
+            a.showAndWait();
+            clearFields();
+            return;
+        }
         Boolean validUsername = userManager.validUsername(username.getText());
         if (!validUsername){
             Alert a= new Alert(Alert.AlertType.WARNING);
@@ -40,6 +48,7 @@ public class RegisterController {
             a.setContentText("Username already exists or empty!");
             a.showAndWait();
             clearFields();
+            return;
         }
 
         if (!userManager.passwordsMatch(password.getText(), repeatpassword.getText())){
@@ -48,7 +57,10 @@ public class RegisterController {
             a.setContentText("Passwords don't match");
             a.showAndWait();
             clearFields();
+            return;
         }
+
+
         User u = new User();
         u.setUsername(username.getText());
         u.setPassword(password.getText());
