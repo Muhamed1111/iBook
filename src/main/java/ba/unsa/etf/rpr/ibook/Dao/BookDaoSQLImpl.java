@@ -33,9 +33,7 @@ public class BookDaoSQLImpl extends AbstractDao<Book> implements BookDao {
             book.setId(rs.getInt("id"));
             book.setTitle(rs.getString("title"));
             book.setGenre(rs.getString("genre"));
-            book.setLeased(rs.getBoolean("leased"));
-            book.setAuthor(DaoFactory.authorDao().getById(rs.getInt("id")));
-            book.setUser(DaoFactory.userDao().getById(rs.getInt("id")));
+            book.setAuthor(DaoFactory.authorDao().getById(rs.getInt("authorid")));
             return book;
         } catch (SQLException e) {
             throw new BookException(e.getMessage(), e);
@@ -48,9 +46,7 @@ public class BookDaoSQLImpl extends AbstractDao<Book> implements BookDao {
         row.put("id", object.getId());
         row.put("title", object.getTitle());
         row.put("genre", object.getGenre());
-        row.put("leased", object.getLeased());
         row.put("authorid", object.getAuthor().getId());
-        row.put("userid", object.getUser().getId());
         return row;
     }
 }

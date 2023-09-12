@@ -9,8 +9,6 @@ public class Book implements Idable {
     private String title;
     private String genre;
     private Author author;
-    private Boolean leased;
-    private User user;
 
     public String getTitle() {
         return title;
@@ -36,17 +34,6 @@ public class Book implements Idable {
         this.author = author;
     }
 
-    public Boolean getLeased() {
-        return leased;
-    }
-
-    public void setLeased(Boolean leased) {
-        this.leased = leased;
-    }
-
-    public User getUser() {
-        return user;
-    }
 
     @Override
     public int getId() {
@@ -68,12 +55,10 @@ public class Book implements Idable {
         return Objects.hash(getId());
     }
 
-    public Book(String title, String genre, Author author, Boolean leased, User user) {
+    public Book(String title, String genre, Author author) {
         this.title = title;
         this.genre = genre;
         this.author = author;
-        this.leased = leased;
-        this.user = user;
     }
 
     @Override
@@ -81,9 +66,6 @@ public class Book implements Idable {
         this.id = id;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 
 
 }

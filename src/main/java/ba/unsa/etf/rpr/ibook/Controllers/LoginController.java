@@ -45,9 +45,6 @@ public class LoginController {
         }
 
         if (userManager.authenticate(username.getText(), password.getText())){
-            Alert a = new Alert(Alert.AlertType.INFORMATION);
-            a.setHeaderText("Succesfully logged in!");
-            a.showAndWait();
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/mainwindow.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
